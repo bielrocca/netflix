@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="shortcut icon" href="imgs/netflixlogo.png" type="image/x-icon">
+        <link rel="stylesheet" href="lib/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/stylecel.css">
+        <link rel="stylesheet" href="css/styletablet.css">
+
+        <title>Início - Netflix</title>
+    </head>
+    <body>
+        <header id="cabecalho">
+            <div class="navbar navbar-expand-lg">
+                <div class="container">
+                    <img src="imgs/netflix.png" alt="Logo Max">
+                    <nav class="collapse navbar-collapse justify-content-end">
+                        <ul class="nav navbar-nav txts-header align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Séries</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Filmes</a>
+                            </li>
+                            <li class="nav-item" id="end-item">
+                                <a class="nav-link" href="#">Bombando</a>
+                            </li>
+                            <li class="nav-item" id="end-item">
+                                <a class="nav-link" href="#">Minha lista</a>
+                            </li>
+                            <li class="nav-item" id="end-item">
+                                <a class="nav-link" href="#">Navegar por idiomas</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="collapse nav-cel navbar-collapse justify-content-end">
+                        <ul class="nav icons navbar-nav align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="imgs/lupa.png" alt="HBO logo">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img src="./imgs/favoritos.png" alt="HBO logo">
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <img id="user-icon" src="./imgs/user.png" alt="HBO logo">
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="carousel-container">
+            <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="6000" class="carousel-item active">
+                        <div id="overlay"></div>
+                        <img class="w-100 large-bg" src="./imgs/fastfuriousbanner.jpg" alt="">
+                        <img class="small-bg w-100" src="./imgs/fastfurious.jpg" alt="">
+                        <div class="carousel-caption vf">
+                            <img id="txt-supernatural" src="./imgs/fastfuriouslogo.png" alt="logo supernatura">
+                            <div class="d-flex align-items-center indicators">
+                                <img id="idades" src="./imgs/16.png" alt="idade minima">
+                            </div>
+                            <p class="description">Dominic Toretto e Letty vivem uma vida pacata ao lado do filho. Mas eles logo são ameaçados pelo passado de Dom: seu irmão desaparecido Jakob, que retorna e está trabalhando ao lado de Cipher. Cabe a Dom reunir a equipe novamente para enfrentá-los.</p>
+                            <button class="button-max">Ir para o Filme</button>
+                        </div>
+                    </div>
+                    <div data-bs-interval="6000" class="carousel-item">
+                        <div id="overlay"></div>
+                        <img class="w-100 large-bg" src="./imgs/thor.jpeg" alt="">
+                        <img class="w-100 small-bg" src="./imgs/thorcard.jpg" alt="">
+                        <div class="carousel-caption">
+                            <img src="./imgs/thorlogo.png" alt="logo largados e pelados">
+                            <div class="d-flex align-items-center indicators">
+                                <img id="idades" src="./imgs/a14.png" alt="idade minima">
+                            </div>
+                            <p class="description">Thor em uma jornada diferente de tudo que ele já enfrentou – uma busca pela paz interior. Mas sua aposentadoria é interrompida por um assassino galático conhecido como Gorr, o Carniceiro dos Deuses, que busca a extinção dos deuses.</p>
+                            <button class="button-max">Ir para o Filme</button>
+                        </div>
+                    </div>
+                </div>
+                <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                </div>
+            </div>
+        </div>
+        <div class="bg-div"></div>
+        <div class="series">
+            <div class="">
+                <h2>Filmes e Séries para você</h2>
+                <div class="row series-cards">
+                    <div class="col">
+                        <div class="scrolling-wrapper">
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="./imgs/strangerthings.jpg">
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="./imgs/fastfuriouscard.jpg">
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="./imgs/venom.jpg">
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="./imgs/housecard.jpeg">
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="./imgs/thevadcard.jpeg">
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="./imgs/rickcard.jpeg">
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="./imgs/opfcard.jpeg">
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="./imgs/malucocard.jpeg">
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="./imgs/thorcard2.jpg">
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="./imgs/brooklynninenine.jpg">
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="./imgs/febrecard.jpeg">
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="./imgs/bigbangcard.jpeg">
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn scroll-left">
+                            <span class="carousel-control-prev-icon d-none"></span>
+                        </button>
+                        <button class="btn scroll-right">
+                            <span class="carousel-control-next-icon d-none"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-10">
+            <div class="">
+                <img class="top10-logo" src="./imgs/top10.png" alt="">
+                <div class="row top-10-cards">
+                    <div class="col">
+                        <div class="scrolling-wrapper">
+                            <div class="podium">
+                                <img class="number" src="./imgs/1.png" alt="">
+                                <div class="card">
+                                    <div class="card-img-overlay">
+                                        <img class="card-img" src="./imgs/strangerthings.jpg">
+                                    </div>
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img class="number" src="./imgs/2.png" alt="">
+                                <div class="card">
+                                    <div class="card-img-overlay">
+                                        <img class="card-img" src="./imgs/suits.jpg">
+                                    </div>
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img class="number" src="./imgs/3.png" alt="">
+                                <div class="card">
+                                    <div class="card-img-overlay">
+                                        <img class="card-img" src="./imgs/youngsheldon.jpg">
+                                    </div>
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img class="number" src="./imgs/4.png" alt="">
+                                <div class="card">
+                                    <div class="card-img-overlay">
+                                        <img class="card-img" src="./imgs/peakyblinderscard.png">
+                                    </div>
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img class="number" src="./imgs/5.png" alt="">
+                                <div class="card">
+                                    <div class="card-img-overlay">
+                                        <img class="card-img" src="./imgs/thevadcard.jpeg">
+                                    </div>
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img class="number" src="./imgs/6.png" alt="">
+                                <div class="card">
+                                    <div class="card-img-overlay">
+                                        <img class="card-img" src="./imgs/malucocard.jpeg">
+                                    </div>
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img class="number" src="./imgs/7.png" alt="">
+                                <div class="card">
+                                    <div class="card-img-overlay">
+                                        <img class="card-img" src="./imgs/rickcard.jpeg">
+                                    </div>
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img class="number" src="./imgs/8.png" alt="">
+                                <div class="card">
+                                    <div class="card-img-overlay">
+                                        <img class="card-img" src="./imgs/ragnarok.jpg">
+                                    </div>
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img class="number" src="./imgs/9.png" alt="">
+                                <div class="card">
+                                    <div class="card-img-overlay">
+                                        <img class="card-img" src="./imgs/thewitcher.jpg">
+                                    </div>
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <img class="number" src="./imgs/10.png" alt="">
+                                <div class="card">
+                                    <div class="card-img-overlay">
+                                        <img class="card-img" src="./imgs/13reasons.jpg">
+                                    </div>
+                                    <div class="card-header">
+                                        <button class="dropdown-btn dropdown-toggle" data-bs-toggle="dropdown">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+                                                <g>
+                                                    <path d="M13.375 5.25a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 12a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0zM13.375 18.75a1.375 1.375 0 1 1-2.75 0 1.375 1.375 0 0 1 2.75 0z"></path>
+                                                </g>
+                                            </svg>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                <svg width="20" height="20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M11.26 6.414a.813.813 0 1 1-1.626 0 .813.813 0 0 1 1.627 0zM10.129 8.04c.234 0 .417.067.55.2s.197.304.197.514c0 .188-.044.43-.132.728l-.967 3.074a.915.915 0 0 0-.066.343c0 .229.073.343.22.343.183 0 .403-.08.66-.24.256-.165.476-.304.659-.419l.132-.096c.03 0 .084.044.165.13.08.088.12.15.12.186-.124.133-.351.302-.681.508a6.991 6.991 0 0 1-1.055.549c-.381.155-.726.233-1.034.233-.234 0-.417-.066-.55-.199a.699.699 0 0 1-.197-.515c0-.137.051-.38.154-.727l.901-2.868c.073-.27.11-.453.11-.55 0-.228-.073-.343-.22-.343-.088 0-.209.037-.363.11-.146.073-.29.156-.428.247-.14.087-.242.156-.308.206l-.11.083c-.03 0-.084-.044-.165-.13-.08-.088-.12-.15-.12-.186.116-.124.329-.277.637-.46.308-.187.637-.354.99-.5.35-.147.651-.22.9-.22z"></path>
+                                                        <path clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm6.5-8a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" fill-rule="evenodd"></path>
+                                                    </g>
+                                                </svg>
+                                                <a href="#">Adicione à minha lista</a>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#fff" stroke="#fff">
+                                                    <path clip-rule="evenodd" d="M10 2.583a.75.75 0 0 1 .75.75V9.25h5.917a.75.75 0 0 1 0 1.5H10.75v5.917a.75.75 0 0 1-1.5 0V10.75H3.333a.75.75 0 0 1 0-1.5H9.25V3.334a.75.75 0 0 1 .75-.75z" fill-rule="evenodd"></path>
+                                                </svg>
+                                                <a href="#">Mais informações</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn scroll-left">
+                            <span class="carousel-control-prev-icon d-none"></span>
+                        </button>
+                        <button class="btn scroll-right">
+                            <span class="carousel-control-next-icon d-none"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="generos">
+            <div class="">
+                <h2>Explore por gêneros</h2>
+                <div class="row generos-cards">
+                    <div class="col">
+                        <div class="scrolling-wrapper">
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="imgs/acao.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="imgs/animação.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="imgs/aventura.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="imgs/terror.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="imgs/comedia.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="imgs/comidacasa.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="imgs/documentario.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="imgs/drama.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="imgs/eventos.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="imgs/fantasia.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-img-overlay">
+                                    <img src="imgs/policial.jpeg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button class="btn scroll-left">
+                            <span class="carousel-control-prev-icon d-none"></span>
+                        </button>
+                        <button class="btn scroll-right">
+                            <span class="carousel-control-next-icon d-none"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="d-flex justify-content-center">
+                    <p>&copy;2024 - Desenvolvido por RoccaDev</p>
+                </div>
+                <div class="links-footer">
+                    <ul class="d-flex social-midia">
+                        <li>
+                            <a href="">
+                                <img src="./imgs/yt.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./imgs/tw.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./imgs/face.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./imgs/in.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="./imgs/tk.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="d-flex footer-li">
+                        <li>
+                            <a href="#">Politica de Privacidade</a>
+                        </li>
+                        <li>
+                            <a href="#">Termos de Uso</a>
+                        </li>
+                        <li>
+                            <a href="#">Gerenciar preferências de cookies</a>
+                        </li>
+                        <li>
+                            <a href="#">Info</a>
+                        </li>
+                        <li>
+                            <a href="#">Ajuda</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="lib/jquery-3.7.1.min.js"></script>
+        <script src="lib/bootstrap.bundle.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
