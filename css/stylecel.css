@@ -108,7 +108,8 @@
         width: 100vw;
         overflow-x: hidden;
         white-space: nowrap;
-        padding-left: 0px;
+        padding-left: 5%;
+        display: block;
     }
     
     h2 {
