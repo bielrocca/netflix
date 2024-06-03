@@ -111,6 +111,10 @@
         padding-left: 5%;
         display: block;
     }
+
+    .lateral {
+        padding: 0px;
+    }
     
     h2 {
         margin-left: 12px;
